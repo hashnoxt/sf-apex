@@ -117,4 +117,10 @@ public with sharing class ApexDataTypes {
         return s;
     }
 
+    public Time getTime(){
+        Time exampleTime = Time.newInstance(3, 14, 55, 0);
+        System.debug(exampleTime);
+
+        return exampleTime;
+    }
 }
