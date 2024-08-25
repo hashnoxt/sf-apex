@@ -58,4 +58,63 @@ public with sharing class ApexDataTypes {
         return exampleDouble;
     }
 
+    //ID
+    /* Any valid 18-character Lightning Platform record identifier. */
+    public ID getId(){
+        ID exampleId = '00300000003T2PG';
+        System.debug(exampleId);
+
+        return exampleId;
+    }
+
+    //Integer
+    /* A 32-bit number that doesn’t include a decimal point. 
+    Integers have a minimum value of -2,147,483,648 and a maximum value of 2,147,483,647. 
+    */
+    public Integer getInteger(){
+        Integer exampleInteger = 3;
+        System.debug(exampleInteger);
+
+        return exampleInteger;
+    }
+
+    //Long
+    /* A 64-bit number that doesn’t include a decimal point. 
+    Longs have a minimum value of -2^63 and a maximum value of 2^63-1.
+    Use this data type when you need a range of values wider than the range provided by Integer. 
+    */
+    public Long getLong(){
+        Long exampleLong = 2147483648L;
+        System.debug(exampleLong);
+
+        return exampleLong;
+    }
+
+    //Object
+    /* Any data type that is supported in Apex. Apex supports primitive data types (such as Integer), 
+    user-defined custom classes, the sObject generic type, or an sObject specific type (such as Account). 
+    All Apex data types inherit from Object.
+    */
+    public Object getObject(){
+        Object obj = 10;
+        // Cast the object to an integer.
+        Integer i = (Integer)obj;
+        System.debug(i);
+
+        return obj;
+    }
+
+    //String
+    /* Empty Strings and Trailing Whitespace: 
+    sObject String field values follow the same rules as in SOAP API: they can never be empty (only null), 
+    and they can never include leading and trailing whitespace. 
+    These conventions are necessary for database storage.
+    */
+    public String getString(){
+        String s = 'The quick brown fox jumped over the lazy dog.';
+        System.debug(s);
+
+        return s;
+    }
+
 }
