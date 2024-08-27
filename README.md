@@ -47,3 +47,24 @@ To declare a variable, specify the following:
 [= value]
 ```
 
+Class Methods
+
+To define a method, specify the following:
+
+- Optional: Modifiers, such as public or protected.
+- Required: The data type of the value returned by the method, such as String or Integer. Use void if the method doesn’t return a value.
+- Required: A list of input parameters for the method, separated by commas, each preceded by its data type, and enclosed in parentheses (). If there are no parameters, use a set of empty parentheses. A method can only have 32 input parameters.
+- Required: The body of the method, enclosed in braces {}. All the code for the method, including any local variable declarations, is contained here.
+
+```
+[public | private | protected | global] [override] [static] data_type method_name 
+(input parameters) 
+{
+// The body of the method
+}
+```
+
+In Apex, all primitive data type arguments, such as Integer or String, are passed into methods by value. This fact means that any changes to the arguments exist only within the scope of the method. When the method returns, the changes to the arguments are lost.
+
+Non-primitive data type arguments, such as sObjects, are passed into methods by reference. Therefore, when the method returns, the passed-in argument still references the same object as before the method call. Within the method, the reference can't be changed to point to another object but the values of the object's fields can be changed.
+
