@@ -31,4 +31,9 @@ public class PassNonPrimitiveTypeExample {
         // five temperature values.
         m = new List<Integer>{55, 59, 62, 60, 63};
     }    
+
+    public void showString(){
+        System.debug(ApexClasses.sharedString);
+        ApexClasses.sharedString = 'faker';
+    }
 }
